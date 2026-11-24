@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #334155;
+    min-height: 100vh;
+}
+
+/* BARRA SUPERIOR */
+body > header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 18px 35px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > div > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+nav img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav span {
+    font-size: 15px;
+    color: #dbeafe;
+}
+
+/* CONTENEDOR PRINCIPAL */
+body > div {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 25px;
+}
+
+body > div > div {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+/* MENÚ LATERAL */
+aside {
+    width: 230px;
+    min-width: 230px;
+    background-color: white;
+    padding: 25px 18px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    min-height: 250px;
+}
+
+aside h6 {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+aside a {
+    display: block;
+    text-decoration: none;
+    color: #475569;
+    padding: 13px 15px;
+    margin-bottom: 8px;
+    border-radius: 7px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+aside a:hover {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    transform: translateX(4px);
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    flex: 1;
+    min-width: 0;
+}
+
+main > header {
+    margin-bottom: 25px;
+}
+
+main h1 {
+    color: #1e3a8a;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+main > header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* SECCIÓN DEL FORMULARIO */
+section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+section h2 {
+    color: #1e3a8a;
+    font-size: 21px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* FORMULARIO */
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+form label {
+    font-weight: 600;
+    color: #334155;
+    font-size: 14px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background-color: #f8fafc;
+    color: #334155;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #2563eb;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* BOTÓN GUARDAR */
+form button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+/* PIE DE PÁGINA */
+body > footer {
+    background-color: #1e3a8a;
+    color: #dbeafe;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* DISEÑO RESPONSIVE */
+@media (max-width: 768px) {
+
+    body > div > div {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+    }
+
+    aside a {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 25px;
+    }
+
+    nav > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body > div {
+        padding: 0 12px;
+    }
+
+    body > header {
+        padding: 15px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    aside a {
+        display: block;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
